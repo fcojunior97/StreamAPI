@@ -16,11 +16,21 @@ public class Desafio5 {
 
         List<Integer> numeros = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5, 4, 3);
 
+        Long qtdNumerosMaioresQueCinco = numeros.stream()
+                .filter(numero -> numero > 5)
+                .count();
+
         Optional<Integer> somaDosValoresMaioresQueCinco = numeros.stream()
                 .filter(numero -> numero > 5)
                 .reduce((num1, num2) -> num1 + num2);
 
-        //if()
+        System.out.println("Quantidade de numeros maiores que cinco: " + qtdNumerosMaioresQueCinco);
+        System.out.println("Soma dos numeros maiores que cinco: " + somaDosValoresMaioresQueCinco.get());
+
+        if(somaDosValoresMaioresQueCinco.isPresent()) {
+            Long resultado = somaDosValoresMaioresQueCinco.get() / qtdNumerosMaioresQueCinco;
+            System.out.println("Média dos numeros maiores que cinco:  " + resultado);
+        }
 
 
 
