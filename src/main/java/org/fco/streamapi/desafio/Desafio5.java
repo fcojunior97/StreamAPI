@@ -4,7 +4,7 @@ package org.fco.streamapi.desafio;
 /*
     Desafio 5 - Calcule a média dos números maiores que 5:
     Com a Stream API, calcule a média dos números maiores que 5 e exiba o resultado no console.
- */
+*/
 
 import java.util.Arrays;
 import java.util.List;
